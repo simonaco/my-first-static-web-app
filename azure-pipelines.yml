@@ -13,13 +13,13 @@ stages:
   - stage: dev_deploy
     jobs:
       - deployment: devdeploy
-        environment: staging
+        environment: default
         strategy:
           runOnce:
             deploy:
               steps:
               - checkout: self
-              - task: AzureStaticWebApp@0.187.2
+              - task: AzureStaticWebApp@0
                 inputs:
                   app_location: '/src'
                   api_location: ''

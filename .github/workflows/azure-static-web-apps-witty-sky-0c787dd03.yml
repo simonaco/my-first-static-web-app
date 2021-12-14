@@ -33,6 +33,9 @@ jobs:
           app_location: "/src" # App source code path
           api_location: "" # Api source code path - optional
           output_location: "" # Built app content directory - optional
+        env:
+          ENVIRONMENT_NAME: dev
+
           ###### End of Repository/Build Configurations ######
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'

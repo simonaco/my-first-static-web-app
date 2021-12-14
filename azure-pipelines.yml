@@ -21,7 +21,7 @@ stages:
               - checkout: self
               - task: AzureStaticWebApp@0
                 inputs:
-                  app_location: '/'
-                  api_location: 'api'
-                  output_location: 'build'
+                  app_location: '/src'
+                  api_location: ''
+                  output_location: ''
                   azure_static_web_apps_api_token: $(deployment_token)

@@ -13,7 +13,7 @@ stages:
   - stage: dev_deploy
     jobs:
       - deployment: devdeploy
-        environment: staging
+        environment: thisisaverylongenvironmentname
         variables:
           - group: "New variable group 14-Dec"
         strategy:
